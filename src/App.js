@@ -12,7 +12,6 @@ function App () {
   // function birdNames(params) {
   //   setBirds(params)
   // }
-  console.log(birds)
   return (
     <div>
       <h1>Hello, world!</h1>
