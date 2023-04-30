@@ -8,10 +8,10 @@ import Checkout from "./Components/Checkout";
 
 
 function App () {
-  const [birds, setBirds] = useState(birdData)
-  function birdNames(params) {
-    setBirds(params)
-  }
+  // const [birds, setBirds] = useState(birdData)
+  // function birdNames(params) {
+  //   setBirds(params)
+  // }
   console.log(birds)
   return (
     <div>
