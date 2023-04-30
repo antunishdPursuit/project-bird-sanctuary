@@ -1,5 +1,5 @@
-import { useState } from "react";
-import birdData from "./data/birds.js";
+// import { useState } from "react";
+// import birdData from "./data/birds.js";
 // import {bonusItems} from "./data/bonusItems.js";
 import BirdCards from "./Components/BirdCards";
 import Carts from "./Components/Cart.js";
