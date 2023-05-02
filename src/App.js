@@ -57,7 +57,7 @@ function App () {
     if(adoptions.length >= 1){
       SetAmount(0)
       SetAdoption([])
-      window.alert("You're adoptions were sent through!")
+      window.alert("You have adopted birds. Thank you!")
     } else {
       window.alert("You need to add birds to the cart!")
     }
