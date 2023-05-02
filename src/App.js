@@ -28,7 +28,7 @@ function App () {
   }
 
   function adopt(id) {
-    birds.map(bird => {
+    return birds.forEach(bird => {
       if(bird.id === id){
         let adoptedBird = {...bird, adoptId: generateUniqueID()}
         return (
@@ -36,16 +36,15 @@ function App () {
           SetAmount(() => amount + adoptedBird.amount),
           increaseAmount(adoptedBird.amount)
         )
-
       }
     })
   }
 
   function removeBird(id) {
     SetAdoption(adoptions.filter(adopt => adopt.adoptId !== id))
-    adoptions.map(bird => {
+    adoptions.forEach(bird => {
       if(bird.adoptId === id){
-        SetAmount(amount - bird.amount)
+        return SetAmount(amount - bird.amount)
       }
     })
     if (adoptions.length <= 3) {
