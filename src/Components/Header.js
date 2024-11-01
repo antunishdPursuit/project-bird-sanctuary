@@ -19,7 +19,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <a className="nav-link floating-button" href="#Birds">
+            <a className="floating-button" href="#topOfContainer">
                 Continue for Adoption 
                 <span className="arrow">&#8595;</span>
             </a>

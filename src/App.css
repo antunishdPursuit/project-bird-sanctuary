@@ -106,38 +106,43 @@
   position: absolute;
   left: 50%;
   bottom: 20px;
-  padding: 0px 5px;
+  padding: 5px 10px; /* Adjust padding for anchor link */
   z-index: 1000;
   color: #fff;
   opacity: 0;
   font-size: 1rem;
+  text-decoration: none; /* Remove underline for links */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  background-color: rgba(92,132,99, 0.2) ;
+  background-color: rgba(123, 158, 135, 0.3);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateX(-50%);
   animation: fadeIn 3s ease forwards 4s, floatDown 3s ease-in-out infinite 6s;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
-
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
+
 .floating-button .arrow {
   font-size: 1.2rem;
 }
 
 .floating-button:hover {
   background-color: #44624a;
-  transform: translateX(-50%) translateY(-3px); 
+  transform: translateX(-50%) translateY(-3px);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
+
 
 
 @keyframes floatDown {

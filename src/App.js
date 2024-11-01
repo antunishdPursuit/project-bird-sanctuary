@@ -64,7 +64,7 @@ function App () {
   return (
     <div>
       <Header/>
-        <main className="container">
+        <main className="container" id="topOfContainer">
             <div className="row">
                 <aside className="col-md-3" id="leftSideBox">
                   <Cart adoptions={adoptions} amount={amount} discount={discount}  removeBird={removeBird} bonusItems={bonusItems}/>
