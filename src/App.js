@@ -64,17 +64,17 @@ function App () {
   return (
     <div>
       <Header/>
-    <main className="container">
-        <div className="row">
-            <aside className="col-md-3" id="leftSideBox">
-              <Cart adoptions={adoptions} amount={amount} discount={discount}  removeBird={removeBird} bonusItems={bonusItems}/>
-              <Checkout removeAll={removeAll}/>
-            </aside>
-            <aside className="col">
-                  <BirdCards birds={birds} adopt={adopt}/>
-            </aside>
-        </div>
-    </main>        
+        <main className="container">
+            <div className="row">
+                <aside className="col-md-3" id="leftSideBox">
+                  <Cart adoptions={adoptions} amount={amount} discount={discount}  removeBird={removeBird} bonusItems={bonusItems}/>
+                  <Checkout removeAll={removeAll}/>
+                </aside>
+                <aside className="col">
+                      <BirdCards birds={birds} adopt={adopt}/>
+                </aside>
+            </div>
+        </main>        
       <Footer/>
     </div>
   );
