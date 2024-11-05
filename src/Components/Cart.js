@@ -1,47 +1,36 @@
 
-export default function Cart({adoptions, amount, discount, removeBird, bonusItems}) {
-  function switchAmount(amount) {
-    if (amount < 300){
-      return <ul> <li>{bonusItems[0]}</li></ul>
-    } else if (amount <= 500) {
-      return <ul>
-        <li>{bonusItems[0]}</li>
-        <li>{bonusItems[1]}</li>
-        </ul>
-    }
-    else if (amount <= 1000) {
-      return <ul>
-        <li>{bonusItems[0]}</li>
-        <li>{bonusItems[1]}</li>
-        <li>{bonusItems[2]}</li>
-        </ul>
-    } else if (amount > 1000){
-      return <ul>
-        <li>{bonusItems[0]}</li>
-        <li>{bonusItems[1]}</li>
-        <li>{bonusItems[2]}</li>
-        <li>{bonusItems[3]}</li>
-      </ul>
-    }
-  }
+export default function Cart({adoptions, amount, discount, removeBird}) {
+
   return (
-        <div className="Cart">
-          <h1>Cart</h1>
-          <p>Discount: {discount}%</p>
-          <h4>Total: ${adoptions.length >= 3 ? amount * .9 : amount}</h4>
-          <ol>
-          {adoptions.length >= 1 ? adoptions.map((adopt, index) => (
-            <li key={index}>{adopt.name}: $<h4>{adopt.amount}</h4> <br/>
+    <div className="Cart">
+      <div className="Cart_bonus_total">
+        {adoptions.length >= 3 ? 
+          (<h4>Total: ${amount * .9} 
+            <p className="Cart_discount">Discount Applied: {discount}% </p>
+          </h4>) 
+          : 
+          (<h4 className={adoptions.length === 0 ? "Cart_hidden" : ``}>Total: ${amount}
+            <p className="Cart_hidden_p">Hidden Text</p>
+          </h4>)
+        }
+        <h1> {adoptions.length === 0  ? "" : "Adoptees"}</h1>
+      </div>
+      <ol>
+        {adoptions.length >= 1 ? adoptions.map((adopt, index) => (
+          <div key={index} className="adoptee_box">
+            <img className="adoptee_img_box" alt={adopt.name}src={adopt.img}></img>
+            <div className="adoptee_box_overlay">
+              <p >{adopt.name}: ${adopt.amount} </p>
               <button onClick={() =>removeBird(adopt.adoptId)}>
               Remove
               </button>
-            </li>
-
-            )): null}
-          </ol>
-          <ul>
-          {adoptions.length >= 1 ? switchAmount(amount):null}
-          </ul>
-        </div>
-      );
+            </div>
+          </div >
+          ))
+          : 
+          null
+        }
+      </ol>
+    </div>
+  );
 }
