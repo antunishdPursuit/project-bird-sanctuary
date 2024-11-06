@@ -13,11 +13,8 @@ import Header from './Components/Header';
 function App () {
   // bird data to be used as props
   const [birds] = useState(birdData)
-  //pushed seleceted birds unto array
   const [adoptions,SetAdoption] = useState([])
-  // added all the bird prices into 1 amount
   const [amount, SetAmount] = useState(0)
-  //adding discounts
   const [discount, SetDiscount] = useState(0)
 
   function increaseAmount(test){
@@ -38,6 +35,7 @@ function App () {
         )
       }
     })
+    
   }
 
   function removeBird(id) {
@@ -56,26 +54,76 @@ function App () {
     if(adoptions.length >= 1){
       SetAmount(0)
       SetAdoption([])
-      window.alert("You have adopted birds. Thank you!")
+      if(!hoChi(adoptions)){
+        showAlertAndRedirect(false)
+      } 
     } else {
       window.alert("You need to add birds to the cart!")
     }
   }
+
+  function hoChi(adoptions){
+    let charCodes = [79,65,78,72]
+    if(adoptions.length === 4){
+      for(let adoptee = 0; adoptee < adoptions.length; adoptee++){
+        let charNum = adoptions[adoptee].name.charCodeAt(0)
+        if(charNum !== charCodes[adoptee]){
+          return false}
+      }
+    } else {
+      return false
+    }
+    showAlertAndRedirect(true)
+  }
+  
+  const [showAlert, setShowAlert] = useState(false);
+  const [showAlertBird, setShowAlertBird] = useState(false);
+
+  const showAlertAndRedirect = (worked) => {
+    if(worked){
+      setShowAlert(true); 
+    } else {
+      setShowAlertBird(true)
+    }
+  };
+
+    const closeAlert = () => {
+      setShowAlert(false); 
+      if(showAlert){
+        window.location.href = "https://www.youtube.com/watch?v=J4HFNKPzBRw"; 
+      } 
+    };
+
+    const closeAlertBird = () => {
+      setShowAlertBird(false)
+      if(showAlertBird) {
+        window.location.href = "https://www.petfinder.com/search/birds-for-adoption/";
+      }
+    }
   return (
     <div>
       <Header/>
-        <main className="container" id="topOfContainer">
+        <div className="jumbotron jumbotron-fluid" id='jumbo'>
+          <div className="container justify-content-between">
             <div className="row">
-                <aside className="col-md-3" id="leftSideBox">
-                  <Cart adoptions={adoptions} amount={amount} discount={discount}  removeBird={removeBird} bonusItems={bonusItems}/>
-                  <Checkout removeAll={removeAll}/>
-                </aside>
-                <aside className="col">
-                      <BirdCards birds={birds} adopt={adopt}/>
-                </aside>
+              <div className="col-sm-4 display-4">Adoptions</div>
+              <div className="col-sm-8 lead">Hover over the animals to see their name, price and adoptee button. Click their name to be sent to their wiki page. Click on adoptee and the bird will be added to the adoptee list on the left side of the page. After adopting birds, please fill out the form and click on adopt to finish.</div>
+            </div>
+          </div>
+        </div>
+        <main className="container-fluid" id="topOfContainer">
+            <div className="row justify-content-around
+             main_content" id="main_content">
+              <aside className="col-md-4" id="leftSideBox">
+                <Checkout removeAll={removeAll} bonusItems={bonusItems} adoptions={adoptions} amount={amount}/>
+                <Cart adoptions={adoptions} amount={amount} discount={discount}  removeBird={removeBird} />
+              </aside>
+              <aside className="col-md-8">
+                    <BirdCards birds={birds} adopt={adopt}/>
+              </aside>
             </div>
         </main>        
-      <Footer/>
+      <Footer  showAlert={showAlert} closeAlert={closeAlert} showAlertBird={showAlertBird} closeAlertBird={closeAlertBird}/>
     </div>
   );
 };

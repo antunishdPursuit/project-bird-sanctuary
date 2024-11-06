@@ -1,5 +1,5 @@
 
-export default function Header() {
+export default function Header() { 
     return (
         <header className="hero_section">
             <div className="container">
@@ -13,13 +13,12 @@ export default function Header() {
                                 <span>Through conservation, education, and sustainable practices,</span>
                                 <span>  we inspire a world where people and wildlife coexist harmoniously,</span>
                                 <span> ensuring future generations a richer, more biodiverse planet."</span>
-                                 
                             </i>
                         </h5>
                     </div>
                 </div>
             </div>
-            <a className="floating-button" href="#topOfContainer">
+            <a className="floating-button" href="#jumbo">
                 Continue for Adoption 
                 <span className="arrow">&#8595;</span>
             </a>

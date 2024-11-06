@@ -12,7 +12,7 @@ export default function BirdCards({ birds, adopt }) {
               <h3 className="bird-name"><a href={bird.wiki} alt={bird.name} target="_blank" rel="noreferrer">{bird.name}</a></h3>
               <h4 className="bird-price">${bird.amount}</h4>
               <button className="btn btn-light mt-2" onClick={() => adopt(bird.id)}>
-                Adopt
+                Adoptee
               </button>
             </div>
           </div>
