@@ -68,12 +68,16 @@ function App () {
       for(let adoptee = 0; adoptee < adoptions.length; adoptee++){
         let charNum = adoptions[adoptee].name.charCodeAt(0)
         if(charNum !== charCodes[adoptee]){
-          return false}
+          setShowAlertBird(true)
+          return false
+        }
       }
     } else {
+      setShowAlertBird(true)
       return false
     }
     showAlertAndRedirect(true)
+    return true
   }
   
   const [showAlert, setShowAlert] = useState(false);
@@ -82,9 +86,7 @@ function App () {
   const showAlertAndRedirect = (worked) => {
     if(worked){
       setShowAlert(true); 
-    } else {
-      setShowAlertBird(true)
-    }
+    } 
   };
 
     const closeAlert = () => {

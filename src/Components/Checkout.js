@@ -27,55 +27,55 @@ export default function Checkout({removeAll, bonusItems, adoptions, amount}) {
   }
   return (
     <div className="Checkout container">
-      {adoptions.length >= 1 &&
-      
-      <form action="#" onSubmit={removeAll} className="p-2 border rounded">
-      Inital Adoption Form 
-      <div className="mb-2">
-        <input
-          type="text"
-          className="form-control form-control-sm"
-          id="fname"
-          name="fname"
-          placeholder="First Name:"
-          required
-        />
-      </div>
-      <div className="mb-2">
-        <input
-          type="text"
-          className="form-control form-control-sm"
-          id="lname"
-          name="lname"
-          placeholder="Last Name:"
-          required
-        />
-      </div>
-      <div className="mb-2">
-        <input
-          type="email"
-          className="form-control form-control-sm"
-          id="email"
-          name="email"
-          placeholder="Email:"
-          required
-        />
-      </div>
-      <div className="mb-2">
-        <input
-          type="text"
-          className="form-control form-control-sm"
-          id="zipCode"
-          name="zipCode"
-          placeholder="Zip Code:"
-          required
-        />
-      </div>
-      <button type="submit" className="btn btn-success w-100 btn-sm">
-        Adopt!
-      </button>
-    </form>
-
+      {adoptions.length >= 1 ?
+        <form action="#" onSubmit={removeAll} className="p-2 border rounded">
+        Inital Adoption Form 
+        <div className="mb-2">
+          <input
+            type="text"
+            className="form-control form-control-sm"
+            id="fname"
+            name="fname"
+            placeholder="First Name:"
+            required
+          />
+        </div>
+        <div className="mb-2">
+          <input
+            type="text"
+            className="form-control form-control-sm"
+            id="lname"
+            name="lname"
+            placeholder="Last Name:"
+            required
+          />
+        </div>
+        <div className="mb-2">
+          <input
+            type="email"
+            className="form-control form-control-sm"
+            id="email"
+            name="email"
+            placeholder="Email:"
+            required
+          />
+        </div>
+        <div className="mb-2">
+          <input
+            type="text"
+            className="form-control form-control-sm"
+            id="zipCode"
+            name="zipCode"
+            placeholder="Zip Code:"
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-success w-100 btn-sm">
+          Adopt!
+        </button>
+        </form>
+        :
+        <h1>Adoptees?</h1>
       }
 
       <div className="adoptee_bonus">
