@@ -109,7 +109,7 @@ function App () {
           <div className="container justify-content-between">
             <div className="row">
               <div className="col-sm-4 display-4">Adoptions</div>
-              <div className="col-sm-8 lead">Hover over the animals to see their name, price and adoptee button. Click their name to be sent to their wiki page. Click on adoptee and the bird will be added to the adoptee list on the left side of the page. After adopting birds, please fill out the form and click on adopt to finish.</div>
+              <div className="col-sm-8 lead">Hover over the animals to see their name, price and button to add to the adoptee list. Names on the bird images will link to thier wikipedia page. After you finish adding your birds to the list fill out the form, click the adopt button and you will be greeted with an important message!</div>
             </div>
           </div>
         </div>

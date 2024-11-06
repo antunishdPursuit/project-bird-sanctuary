@@ -21,6 +21,19 @@ This **Bird Sanctuary Adoption App** is a user-friendly one page application bui
    - After adding birds to the cart, a modal appears to confirm the adoption process.
    - Upon closing, it redirects users to an external bird adoption website for further information.
 
+
+## How to Use
+
+1. **Browse** the birds available for adoption.
+2. **Add Birds** to the cart, where the total cost and potential discounts will be calculated.
+3. **Earn Bonus Items** as the cart total increases, making each adoption more rewarding.
+4. **Complete Checkout** to adopt the birds. A modal will confirm the adoption, and the cart will reset after submission.
+
+## Live Demo
+
+Try the app here: [SkyHaven Sanctuary](https://skyhavensanctuary.netlify.app/)
+
+
 ## Project Structure and Data Management
 
 - **Data Storage**: Bird data and bonus items are stored in separate JavaScript files (`birds.js` and `bonusItems.js`), ensuring a clear separation between data and application logic.
@@ -34,19 +47,16 @@ This **Bird Sanctuary Adoption App** is a user-friendly one page application bui
 - **JavaScript (ES6+)**: Used throughout the project for logic and data handling.
 - **CSS**: For custom styling and animations.
 
-## How to Use
-
-1. **Browse** the birds available for adoption.
-2. **Add Birds** to the cart, where the total cost and potential discounts will be calculated.
-3. **Earn Bonus Items** as the cart total increases, making each adoption more rewarding.
-4. **Complete Checkout** to adopt the birds. A modal will confirm the adoption, and the cart will reset after submission.
-
 ## Compatibility
 
-- **Supported Browser**: Works on Chrome. Currently not supported on other browsers.
+- **Website Page Fit**: This page is designed to fit well on standard web displays but is not optimized for mobile devices.
+- **Supported Browser**: Works on Chrome. Compatibility with other browsers may vary.
 
-## Live Demo
+## Future Features
+1. **Integration with Adoption API**: Implement an adoption API integration that links displayed birds to real-life adoptable birds. This feature would enable users to explore detailed information and initiate the adoption process directly within the app interface. While users can simulate the adoption experience on the app, final adoption transactions and processes will be completed on the external website hosting the API, ensuring a smooth and connected experience.
 
-Try the app here: [SkyHaven Sanctuary](https://skyhavensanctuary.netlify.app/)
 
+2. **Enhanced User-Friendly UI**: Revamp the user interface to make it more intuitive and easy to navigate. The goal is to design the app so users can understand its purpose and functions at a glance, without needing external instructions or explanations.
+
+3. **Personalized Adoption Recommendations**: Introduce a feature that suggests birds based on user preferences, such as bird type, size, or care requirements. This personalization would help users find the perfect match based on their lifestyle and adoption criteria.
 

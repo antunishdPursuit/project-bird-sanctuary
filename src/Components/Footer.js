@@ -13,7 +13,7 @@ export default function Footer({showAlert, closeAlert, closeAlertBird, showAlert
                 {showAlertBird && (
                     <div className="custom-alert">
                         <div className="alert-content">
-                            <p>Thank you so much for adopting. After pressing OK you will be bought to a page to adopt Birds in your local area!</p>
+                            <p>Thank you so much for attempting to adopt these birds. This website was designed to raise awareness about bird adoptions. Your attempt to adopt is much appreicted and I hope you can finish adopting similar birds on the next page! </p>
                             <button onClick={closeAlertBird}>OK</button>
                         </div>
                     </div>
