@@ -1,19 +1,52 @@
+# Bird Sanctuary Adoption App
 
-# Skyhaven Sanctuary
+This **Bird Sanctuary Adoption App** is a user-friendly one page application built with **React, Bootstrap, HTML, and CSS**. The app offers a way for users to browse and adopt birds, updating the shopping cart and applying discounts based on the cart contents. 
 
-## Overview
-This project is a Bird Sanctuary Adoption App built using React, **Bootstrap, HTML, and CSS**. The app allows users to view a collection of adoptable birds, each with a name, image, and price. 
+## Features
 
-Users can add birds to their shopping cart, which updates the total cost dynamically. If the cart contains three or more birds, a 10% discount is applied. Additionally, users can earn bonus items based on their cart total, with bonus tiers ranging from 1 to 4 items depending on the purchase amount.
+1. **Bird Collection**: Users can browse a variety of adoptable birds, each displayed with a name, image, and adoption price.
+   
+2. **Dynamic Cart Management**:
+   - Users can add birds to the cart, and the total cost updates in real time.
+   - If three or more birds are added to the cart, a **10% discount** is applied automatically.
+   - Users can remove birds from the cart, with real-time updates on the displayed list and total cost.
 
-The cart functionality includes the ability to remove birds and updates the displayed list of adopted birds in real-time. A checkout form enables users to complete their purchase, resetting the cart upon successful submission with a confirmation alert. 
+3. **Bonus Items**: Based on the cart total, users receive bonus items. Bonus tiers range from 1 to 4 items, depending on the purchase amount, adding an element of fun and reward to the adoption process.
 
-Data for the birds and bonus items is stored in separate files (birds.js and bonusItems.js). *The project incorporates modern front-end technologies like React for state management and interactivity, and Bootstrap for responsive styling.*
+4. **Checkout Form**:
+   - A checkout form allows users to finalize their adoption.
+   - On successful submission, the cart resets, and a confirmation alert notifies the user.
 
-### Website
+5. **Adoption Confirmation Modal**:
+   - After adding birds to the cart, a modal appears to confirm the adoption process.
+   - Upon closing, it redirects users to an external bird adoption website for further information.
 
-Live Site: [SkyHaven Sanctuary](https://skyhavensanctuary.netlify.app/)
+## Project Structure and Data Management
 
+- **Data Storage**: Bird data and bonus items are stored in separate JavaScript files (`birds.js` and `bonusItems.js`), ensuring a clear separation between data and application logic.
+- **State Management with React**: React state is used extensively for managing cart items, discounts, and dynamic data updates.
+- **Responsive Styling with Bootstrap**: Bootstrap is integrated for a responsive, visually appealing layout, providing a seamless experience on both desktop.
 
+## Technologies Used
+
+- **React**: For building a responsive and interactive user interface.
+- **Bootstrap**: For consistent and responsive styling.
+- **JavaScript (ES6+)**: Used throughout the project for logic and data handling.
+- **CSS**: For custom styling and animations.
+
+## How to Use
+
+1. **Browse** the birds available for adoption.
+2. **Add Birds** to the cart, where the total cost and potential discounts will be calculated.
+3. **Earn Bonus Items** as the cart total increases, making each adoption more rewarding.
+4. **Complete Checkout** to adopt the birds. A modal will confirm the adoption, and the cart will reset after submission.
+
+## Compatibility
+
+- **Supported Browser**: Works on Chrome. Currently not supported on other browsers.
+
+## Live Demo
+
+Try the app here: [SkyHaven Sanctuary](https://skyhavensanctuary.netlify.app/)
 
 
