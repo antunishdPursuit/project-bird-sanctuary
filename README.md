@@ -1,52 +1,19 @@
 
-# Bird Sanctuary
+# Skyhaven Sanctuary
 
-## Assessment Details
+## Overview
+This project is a Bird Sanctuary Adoption App built using React, **Bootstrap, HTML, and CSS**. The app allows users to view a collection of adoptable birds, each with a name, image, and price. 
 
-Create a bird sanctuary donation app that meets the user stories below.
+Users can add birds to their shopping cart, which updates the total cost dynamically. If the cart contains three or more birds, a 10% discount is applied. Additionally, users can earn bonus items based on their cart total, with bonus tiers ranging from 1 to 4 items depending on the purchase amount.
 
-**The birds are in the array in `src/data/birds.js` and the bonus itesms are in `src/data/bonusItems.js`. **
+The cart functionality includes the ability to remove birds and updates the displayed list of adopted birds in real-time. A checkout form enables users to complete their purchase, resetting the cart upon successful submission with a confirmation alert. 
 
-## User Stories
+Data for the birds and bonus items is stored in separate files (birds.js and bonusItems.js). *The project incorporates modern front-end technologies like React for state management and interactivity, and Bootstrap for responsive styling.*
 
-1. I can see sections with birds, that have a name, image, amount and adopt button.
-1. I can add birds to the shopping cart.
-1. I can see a total cost of the birds in my cart.
-1. I can get a 10% discount if I have 3 or more birds in my cart
-1. I can get a series of bonus items for increasing cart totals
-1. I can use a form to checkout my cart, upon checkout, it resets my cart
-1. I can delete a bird from my cart
+### Website
+
+Live Site: [SkyHaven Sanctuary](https://skyhavensanctuary.netlify.app/)
 
 
-### Birds
 
-- The bird data comes from `src/data/birds.js`
-- Each bird card displays the name, image, and amount (price)
-- Each bird card has a class name of `card`
-- Each bird card has an `Adopt` button
-  - The button text should be: `Adopt`
-
-### Cart
-
-- The cart has a class name of `Cart`
-- When I click on a bird card's adopt button, its name appears in the cart as an `<ol>` list item.
-- The total shows up as an `<h4>` element inside the cart
-- When I click on an additional item, the total cost is updated and additional bird name(s) is added as a list item to the unordered list
-- When there are less than 3 birds in the cart there is a 0% discount
-- When there are 3 or more birds in the cart there is a 10% discount
-
-The bonuses come from `src/data/bonusItems.js`
-
-- The bonus items are added as list items in an `<ul>` list item as follows:
-- 1 bonus (first array item) is given if the total is between 100 and 300
-- 2 bonuses (first and second array items) are given if the total is between 300 and 500
-- 3 bonuses are given if the total is between 500 and 1000
-- 4 bonuses are given if the total is more than 1000
-
-### Checkout
-
-- I can complete the inputs in the checkout form.
-- When I complete the form with valid input and click `Submit`, an alert tells me the purchase was successful.
-  - Alert text should include: `You have adopted birds. Thank you!`
-- When I close the alert box, the cart component should fully reset (no birds, no discount, total = 0, no bonus items listed)
 

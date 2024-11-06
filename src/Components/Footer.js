@@ -24,7 +24,7 @@ export default function Footer({showAlert, closeAlert, closeAlertBird, showAlert
                 <a href="https://www.linkedin.com/in/dennys-antunish/" target="_blank" rel="noreferrer"className="footer-link d-flex align-items-center mx-2">
                     <span className="footer-icon">🕊️</span> LinkedIn
                 </a>
-                <a href="https://github.com/antunishdPursuit" target="_blank" rel="noreferrer" className="footer-link d-flex align-items-center mx-2">
+                <a href="https://github.com/antunishdPursuit/project-bird-sanctuary" target="_blank" rel="noreferrer" className="footer-link d-flex align-items-center mx-2">
                     <span className="footer-icon">🐦</span> GitHub
                 </a>
                 <a href="https://sites.google.com/view/antunish/projects" target="_blank" rel="noreferrer" className="footer-link d-flex align-items-center mx-2">
