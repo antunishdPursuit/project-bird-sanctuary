@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import "./App.css";
-import { v1 as generateUniqueID } from "uuid";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import birdData from "./data/birds.js";
 import bonusItems from "./data/bonusItems.js";
 import BirdCards from "./Components/BirdCards";
@@ -12,47 +11,27 @@ import Header from './Components/Header';
 
 function App () {
   // bird data to be used as props
-  const [birds] = useState(birdData)
+  const birds = birdData
   const [adoptions,SetAdoption] = useState([])
-  const [amount, SetAmount] = useState(0)
-  const [discount, SetDiscount] = useState(0)
-
-  function increaseAmount(test){
-    SetAmount(() => amount + test)
-      if(adoptions.length >= 2){
-        SetDiscount(10)
-      }
-  }
+  const nextAdoptionId = useRef(0)
+  const amount = adoptions.reduce((total, bird) => total + bird.amount, 0)
+  const discount = adoptions.length >= 3 ? 10 : 0
 
   function adopt(id) {
-    return birds.forEach(bird => {
-      if(bird.id === id){
-        let adoptedBird = {...bird, adoptId: generateUniqueID()}
-        return (
-          SetAdoption([...adoptions, adoptedBird]),
-          SetAmount(() => amount + adoptedBird.amount),
-          increaseAmount(adoptedBird.amount)
-        )
-      }
-    })
-    
-  }
-
-  function removeBird(id) {
-    SetAdoption(adoptions.filter(adopt => adopt.adoptId !== id))
-    adoptions.forEach(bird => {
-      if(bird.adoptId === id){
-        return SetAmount(amount - bird.amount)
-      }
-    })
-    if (adoptions.length <= 3) {
-      SetDiscount(0)
+    const bird = birds.find(item => item.id === id)
+    if (bird) {
+      const adoptedBird = {...bird, adoptId: nextAdoptionId.current++}
+      SetAdoption(current => [...current, adoptedBird])
     }
   }
 
-  function removeAll() {
+  function removeBird(id) {
+    SetAdoption(current => current.filter(adopt => adopt.adoptId !== id))
+  }
+
+  function removeAll(event) {
+    event.preventDefault()
     if(adoptions.length >= 1){
-      SetAmount(0)
       SetAdoption([])
       if(!hoChi(adoptions)){
         showAlertAndRedirect(false)
