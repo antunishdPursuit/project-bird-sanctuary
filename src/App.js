@@ -84,26 +84,13 @@ function App () {
   return (
     <div>
       <Header/>
-        <div className="jumbotron jumbotron-fluid" id='jumbo'>
-          <div className="container justify-content-between">
-            <div className="row">
-              <div className="col-sm-4 display-4">Adoptions</div>
-              <div className="col-sm-8 lead">Hover over the animals to see their name, price and button to add to the adoptee list. Names on the bird images will link to thier wikipedia page. After you finish adding your birds to the list fill out the form, click the adopt button and you will be greeted with an important message!</div>
-            </div>
-          </div>
-        </div>
-        <main className="container-fluid" id="topOfContainer">
-            <div className="row justify-content-around
-             main_content" id="main_content">
-              <aside className="col-md-4" id="leftSideBox">
-                <Checkout removeAll={removeAll} bonusItems={bonusItems} adoptions={adoptions} amount={amount}/>
-                <Cart adoptions={adoptions} amount={amount} discount={discount}  removeBird={removeBird} />
-              </aside>
-              <aside className="col-md-8">
-                    <BirdCards birds={birds} adopt={adopt}/>
-              </aside>
-            </div>
-        </main>        
+        <main className="adoption-layout" id="jumbo">
+          <aside className="adoption-sidebar">
+            <Cart adoptions={adoptions} amount={amount} discount={discount} removeBird={removeBird} />
+            <Checkout removeAll={removeAll} bonusItems={bonusItems} adoptions={adoptions} amount={amount}/>
+          </aside>
+          <BirdCards birds={birds} adopt={adopt}/>
+        </main>
       <Footer  showAlert={showAlert} closeAlert={closeAlert} showAlertBird={showAlertBird} closeAlertBird={closeAlertBird}/>
     </div>
   );

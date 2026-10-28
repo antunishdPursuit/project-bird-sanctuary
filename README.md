@@ -1,5 +1,13 @@
 # Bird Sanctuary Adoption App
 
+SkyHaven Sanctuary is a simulated bird-adoption experience. No adoption request or form data is sent; the confirmation links to external bird-adoption information. The cart is kept in memory for the current session.
+
+## Local development
+
+Install Node.js and npm, then run `npm ci`, `npm start`, `npm test -- --runInBand`, and `npm run build`. The current Create React App 4 build uses the legacy OpenSSL provider flag on modern Node. This is a compatibility workaround, not a replacement for the outdated toolchain; the dependency audit reports substantial known vulnerabilities. The test suite exercises cart, discount, bonus, checkout and the existing Easter egg. Bird images are fetched from external sources and can be unavailable.
+
+This project began with a Pursuit starter; Dennis extended the bird data, interface, cart, checkout, styling and deployment. The published demo may differ from the current checkout until changes are separately deployed.
+
 This **Bird Sanctuary Adoption App** is a user-friendly one page application built with **React, Bootstrap, HTML, and CSS**. The app offers a way for users to browse and adopt birds, updating the shopping cart and applying discounts based on the cart contents. 
 
 ## Features
@@ -49,7 +57,7 @@ Try the app here: [SkyHaven Sanctuary](https://skyhavensanctuary.netlify.app/)
 
 ## Compatibility
 
-- **Website Page Fit**: This page is designed to fit well on standard web displays but is not optimized for mobile devices.
+- **Website Page Fit**: The refreshed layout stacks the adoption list and birds on narrow screens. Actual device and assistive-technology verification remains separate from local browser checks.
 - **Supported Browser**: Works on Chrome. Compatibility with other browsers may vary.
 
 ## Future Features

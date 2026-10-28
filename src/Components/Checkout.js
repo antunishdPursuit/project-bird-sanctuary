@@ -1,97 +1,19 @@
-export default function Checkout({removeAll, bonusItems, adoptions, amount}) {
-  function switchAmount(amount) {
-    if (amount < 300){
-      return <span>*{bonusItems[0]}*</span>
-    } else if (amount <= 500) {
-      return <div>
-        <span>*{bonusItems[0]}*</span><br></br>
-        <span>*{bonusItems[1]}*</span>
-        </div>
-    }
-    else if (amount <= 1000) {
-      return <div>
-        <span>*{bonusItems[0]}*</span><br></br>
-        <span>*{bonusItems[1]}*</span><br></br>
-        <span>*{bonusItems[2]}*</span>
-        </div>
-    } else if (amount > 1000){
-      return <div>
-        <span>*{bonusItems[0]}*</span><br></br>
-        <span>*{bonusItems[1]}*</span><br></br>
-        <span>*{bonusItems[2]}*</span><br></br>
-        <span>*{bonusItems[3]}*</span><br></br>
-        <span><strong>*Max Bonuses*</strong></span>
-
-      </div>
-    }
-  }
-  return (
-    <div className="Checkout container">
-      {adoptions.length >= 1 ?
-        <form action="#" onSubmit={removeAll} className="p-2 border rounded">
-        Inital Adoption Form 
-        <div className="mb-2">
-          <input
-            type="text"
-            className="form-control form-control-sm"
-            id="fname"
-            name="fname"
-            placeholder="First Name:"
-            required
-          />
-        </div>
-        <div className="mb-2">
-          <input
-            type="text"
-            className="form-control form-control-sm"
-            id="lname"
-            name="lname"
-            placeholder="Last Name:"
-            required
-          />
-        </div>
-        <div className="mb-2">
-          <input
-            type="email"
-            className="form-control form-control-sm"
-            id="email"
-            name="email"
-            placeholder="Email:"
-            required
-          />
-        </div>
-        <div className="mb-2">
-          <input
-            type="text"
-            className="form-control form-control-sm"
-            id="zipCode"
-            name="zipCode"
-            placeholder="Zip Code:"
-            required
-          />
-        </div>
-        <button type="submit" className="btn btn-success w-100 btn-sm">
-          Adopt!
-        </button>
-        </form>
-        :
-        <h1>Adoptees?</h1>
-      }
-
-      <div className="adoptee_bonus">
-        {adoptions.length >= 1 ? 
-          <span className="adoptee_bonus_main_text">
-            Bonus!
-          </span>
-          :
-          <span className="adoptee_bonus_main_text_two">
-            Hidden
-          </span>
-        }
-        <div className="adoptee_bonus_list" >
-          {adoptions.length >= 1 ? switchAmount(amount):null}
-        </div>
-      </div>
+export default function Checkout({ removeAll, bonusItems, adoptions, amount }) {
+  const bonusCount = amount < 300 ? 1 : amount <= 500 ? 2 : amount <= 1000 ? 3 : 4;
+  if (adoptions.length === 0) return null;
+  return <section className="checkout" aria-labelledby="checkout-heading">
+    <h2 id="checkout-heading">Initial adoption form</h2>
+    <p>This is a simulation; no adoption request is sent.</p>
+    <form onSubmit={removeAll}>
+      <label htmlFor="fname">First name</label><input id="fname" name="fname" autoComplete="given-name" required />
+      <label htmlFor="lname">Last name</label><input id="lname" name="lname" autoComplete="family-name" required />
+      <label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" required />
+      <label htmlFor="zipCode">ZIP code</label><input id="zipCode" name="zipCode" autoComplete="postal-code" required />
+      <button type="submit">Adopt!</button>
+    </form>
+    <div className="bonuses"><h3>Bonus items</h3>
+      <ul>{bonusItems.slice(0, bonusCount).map(item => <li key={item}>{item}</li>)}</ul>
+      {bonusCount === 4 && <strong>Max Bonuses</strong>}
     </div>
-  );
+  </section>;
 }
