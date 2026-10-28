@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import birdData from "./data/birds.js";
 import bonusItems from "./data/bonusItems.js";
 import BirdCards from "./Components/BirdCards";
-import Cart from "./Components/Cart.js";
+import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
 import Footer from './Components/Footer';
 import Header from './Components/Header';

@@ -4,7 +4,7 @@ SkyHaven Sanctuary is a simulated bird-adoption experience. No adoption request 
 
 ## Local development
 
-Install Node.js and npm, then run `npm ci`, `npm start`, `npm test -- --runInBand`, and `npm run build`. The current Create React App 4 build uses the legacy OpenSSL provider flag on modern Node. This is a compatibility workaround, not a replacement for the outdated toolchain; the dependency audit reports substantial known vulnerabilities. The test suite exercises cart, discount, bonus, checkout and the existing Easter egg. Bird images are fetched from external sources and can be unavailable.
+Use Node.js 22.22.2+ within 22.x, 24.15.0+ within 24.x, or 26.0.0+. Run `npm ci`, `npm start`, `npm test`, and `npm run build`. Vite serves the app locally and builds the production bundle in `dist`; Vitest runs the regression suite for cart, discounts, bonus tiers, checkout, image fallback, and the existing Easter egg. Three replacement bird photographs are bundled locally with source and license credits on the page; other bird images use external sources and may be unavailable.
 
 This project began with a Pursuit starter; Dennis extended the bird data, interface, cart, checkout, styling and deployment. The published demo may differ from the current checkout until changes are separately deployed.
 
