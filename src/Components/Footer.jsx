@@ -28,11 +28,8 @@ export default function Footer({ showAlert, closeAlert, closeAlertBird, showAler
         <button ref={closeButton} onClick={close}>OK</button>
       </div>
     </div>}
-    <p>Connect with me</p>
     <div className="footer-links">
-      <a href="https://www.linkedin.com/in/dennys-antunish/" target="_blank" rel="noreferrer">🕊️ LinkedIn</a>
       <a href="https://github.com/antunishdPursuit/project-bird-sanctuary" target="_blank" rel="noreferrer">🐦 GitHub</a>
-      <a href="https://sites.google.com/view/antunish/projects" target="_blank" rel="noreferrer">🦅 Portfolio</a>
     </div>
     <details className="photo-credits">
       <summary>Photo credits</summary>

@@ -6,7 +6,11 @@ SkyHaven Sanctuary is a simulated bird-adoption experience. No adoption request 
 
 Use Node.js 22.22.2+ within 22.x, 24.15.0+ within 24.x, or 26.0.0+. Run `npm ci`, `npm start`, `npm test`, and `npm run build`. Vite serves the app locally and builds the production bundle in `dist`; Vitest runs the regression suite for cart, discounts, bonus tiers, checkout, image fallback, and the existing Easter egg. Three replacement bird photographs are bundled locally with source and license credits on the page; other bird images use external sources and may be unavailable.
 
-This project began with a Pursuit starter; Dennis extended the bird data, interface, cart, checkout, styling and deployment. The published demo may differ from the current checkout until changes are separately deployed.
+## Project history
+
+Dennis originally built this project as a React learning exercise from a Pursuit starter, before using AI for development. He extended the bird data, interface, cart, checkout, styling, and deployment. In 2026, he revisited it with AI assistance to improve accessibility, polish the interface, restore missing bird images, and update the build and test tools. The project preserves the original learning exercise and its playful details.
+
+The published demo may differ from the current checkout until changes are separately deployed.
 
 This **Bird Sanctuary Adoption App** is a user-friendly one page application built with **React, Bootstrap, HTML, and CSS**. The app offers a way for users to browse and adopt birds, updating the shopping cart and applying discounts based on the cart contents. 
 
@@ -22,11 +26,11 @@ This **Bird Sanctuary Adoption App** is a user-friendly one page application bui
 3. **Bonus Items**: Based on the cart total, users receive bonus items. Bonus tiers range from 1 to 4 items, depending on the purchase amount, adding an element of fun and reward to the adoption process.
 
 4. **Checkout Form**:
-   - A checkout form allows users to finalize their adoption.
+   - A checkout form simulates an adoption; it does not submit a real request.
    - On successful submission, the cart resets, and a confirmation alert notifies the user.
 
 5. **Adoption Confirmation Modal**:
-   - After adding birds to the cart, a modal appears to confirm the adoption process.
+   - After submitting the form, a modal confirms the simulation.
    - Upon closing, it redirects users to an external bird adoption website for further information.
 
 
@@ -35,7 +39,7 @@ This **Bird Sanctuary Adoption App** is a user-friendly one page application bui
 1. **Browse** the birds available for adoption.
 2. **Add Birds** to the cart, where the total cost and potential discounts will be calculated.
 3. **Earn Bonus Items** as the cart total increases, making each adoption more rewarding.
-4. **Complete Checkout** to adopt the birds. A modal will confirm the adoption, and the cart will reset after submission.
+4. **Complete the simulated form**. A modal will confirm the simulation, and the cart will reset after submission.
 
 ## Live Demo
 
