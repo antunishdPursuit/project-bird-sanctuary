@@ -53,7 +53,9 @@ button:hover { background: #173724; }
 .sanctuary-footer { background: var(--forest); color: white; text-align: center; padding: 24px; }
 .sanctuary-footer p { margin: 0 0 8px; }
 .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
-.footer-links a { color: white; }
+.footer-links a, .photo-credits a { color: white; }
+.photo-credits { max-width: 800px; margin: 16px auto 0; }
+.photo-credits summary { cursor: pointer; }
 .custom-alert { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; background: rgba(0,0,0,.7); }
 .alert-content { max-width: 480px; width: 100%; background: white; color: var(--ink); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
 .alert-content p { margin: 0 0 16px; }

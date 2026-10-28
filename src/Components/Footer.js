@@ -34,5 +34,9 @@ export default function Footer({ showAlert, closeAlert, closeAlertBird, showAler
       <a href="https://github.com/antunishdPursuit/project-bird-sanctuary" target="_blank" rel="noreferrer">🐦 GitHub</a>
       <a href="https://sites.google.com/view/antunish/projects" target="_blank" rel="noreferrer">🦅 Portfolio</a>
     </div>
+    <details className="photo-credits">
+      <summary>Photo credits</summary>
+      <p>Royal Flycatcher: <a href="https://commons.wikimedia.org/wiki/File:Royal_Flycatcher_(7092232997).jpg">Don Faulkner</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>; Boat Billed Heron: <a href="https://commons.wikimedia.org/wiki/File:Boat_Billed_Heron.jpg">Ltshears</a>, public domain; Frilled Coquette: <a href="https://commons.wikimedia.org/wiki/File:Frilled_Coquette_(Lophornis_magnificus).jpg">Rick elis.simpson</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Photos are displayed with a cropped fit; source files are unchanged.</p>
+    </details>
   </footer>;
 }
